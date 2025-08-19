@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            width: 350px;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .header h2 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        
+        .api-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .api-section label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .api-input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            box-sizing: border-box;
+        }
+        
+        .save-btn {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        
+        .save-btn:hover {
+            background: #45a049;
+        }
+        
+        .status {
+            text-align: center;
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        
+        .status.success {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4CAF50;
+        }
+        
+        .status.error {
+            background: rgba(244, 67, 54, 0.2);
+            color: #f44336;
+        }
+        
+        .instructions {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .instructions h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .instructions ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin: 5px 0;
+        }
+        
+        .api-link {
+            color: #FFD700;
+            text-decoration: none;
+        }
+        
+        .api-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>🤖 LeetCode AI Assistant</h2>
+    </div>
+    
+    <div class="api-section">
+        <label for="apiKey">Gemini API Key:</label>
+        <input type="password" id="apiKey" class="api-input" placeholder="Enter your Gemini API key">
+        <button id="saveBtn" class="save-btn">Save API Key</button>
+        <div id="status" class="status" style="display: none;"></div>
+    </div>
+    
+    <div class="instructions">
+        <h3>📋 How to use:</h3>
+        <ul>
+            <li>Get your free API key from <a href="https://makersuite.google.com/app/apikey" target="_blank" class="api-link">Google AI Studio</a></li>
+            <li>Enter and save your API key above</li>
+            <li>Go to any LeetCode problem page</li>
+            <li>Click the AI Assistant button that appears</li>
+            <li>Start chatting for hints and solutions!</li>
+        </ul>
+        
+        <h3>💡 What you can ask:</h3>
+        <ul>
+            <li>"Give me a hint"</li>
+            <li>"Show me the solution"</li>
+            <li>"Explain the approach"</li>
+            <li>"What's the time complexity?"</li>
+        </ul>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
